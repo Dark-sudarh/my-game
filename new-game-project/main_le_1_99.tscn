@@ -5,6 +5,21 @@
 
 [sub_resource type="Animation" id="Animation_omvcg"]
 resource_name = "Dead"
+length = 0.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [100, 101, 102, 103, 104]
+}
 
 [sub_resource type="Animation" id="Animation_y84f6"]
 resource_name = "IdleDown"
@@ -114,6 +129,21 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_fjwag"]
 resource_name = "JumpUp"
+length = 0.7
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [93, 94, 95, 96, 97, 98, 99]
+}
 
 [sub_resource type="Animation" id="Animation_081ch"]
 resource_name = "Jumpdown"
@@ -146,6 +176,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sword:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sword/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_ns1dp"]
@@ -200,6 +254,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [56, 57, 58, 59]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sword:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.392587),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, 0), Vector2(17, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sword/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1001, 0.201327, 0.307023),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_1jocx"]
@@ -318,7 +396,7 @@ _data = {
 size = Vector2(15.5, 6.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lactc"]
-size = Vector2(17, 20)
+size = Vector2(13.375, 30)
 
 [node name="main-le1-99" type="Node2D"]
 
@@ -342,10 +420,10 @@ libraries = {
 position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_omvcg")
 
-[node name="Area2D" type="Area2D" parent="player"]
+[node name="sword" type="Area2D" parent="player"]
+position = Vector2(17, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player/Area2D"]
-position = Vector2(21, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/sword"]
 shape = SubResource("RectangleShape2D_lactc")
 debug_color = Color(0.466688, 0.591485, 5.77569e-07, 0.42)
 
