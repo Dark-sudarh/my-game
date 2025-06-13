@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dnie8s7y8f6qq"]
+[gd_scene load_steps=25 format=3 uid="uid://dnie8s7y8f6qq"]
 
 [ext_resource type="Script" uid="uid://lj27qdn1cq18" path="res://sss/player.gd" id="1_0nxga"]
 [ext_resource type="Texture2D" uid="uid://cdhfredjkvynn" path="res://kkkkk/Player-rpg.png" id="2_omvcg"]
@@ -470,6 +470,8 @@ size = Vector2(12, 5.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lactc"]
 size = Vector2(13.375, 30)
 
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_omvcg"]
+
 [node name="main-le1-99" type="Node2D"]
 
 [node name="player" type="CharacterBody2D" parent="."]
@@ -498,6 +500,9 @@ position = Vector2(17, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/sword"]
 shape = SubResource("RectangleShape2D_lactc")
 debug_color = Color(0.466688, 0.591485, 5.77569e-07, 0.42)
+
+[node name="AnimationTree" type="AnimationTree" parent="player"]
+tree_root = SubResource("AnimationNodeStateMachine_omvcg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
