@@ -4,7 +4,8 @@ var input_movement = Vector2.ZERO
 var speed = 70
 
 func _ready():
-	$sword/CollisionShape2D.disabled = true
+	$sword/CollisionShape2D.disabled= true
+	
 
 func _physics_process(delta):
 	move()
