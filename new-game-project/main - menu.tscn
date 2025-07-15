@@ -1,4 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5lohwhy1rx4n"]
+[gd_scene load_steps=4 format=3 uid="uid://b5lohwhy1rx4n"]
+
+[ext_resource type="Texture2D" uid="uid://bs12tc8k5gwey" path="res://fer3.png" id="1_p46jt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l8tst"]
+texture = ExtResource("1_p46jt")
+modulate_color = Color(0.646895, 0.461342, 0.515319, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikbug"]
 bg_color = Color(1, 0.952941, 1, 1)
@@ -19,6 +25,21 @@ offset_left = -14.5
 offset_right = 14.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.0
+offset_top = -590.0
+offset_right = 575.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_l8tst")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -58,3 +79,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxFlat_ikbug")
 text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -126.5
+offset_top = -321.0
+offset_right = 127.5
+offset_bottom = 228.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 51
+text = "Me and you will beat the dragon"
