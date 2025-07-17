@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwgruq5v370tl"]
+
+[ext_resource type="Script" uid="uid://dgy01p2adpgcd" path="res://niga.gd" id="1_u36op"]
+[ext_resource type="Texture2D" uid="uid://bonwgd32qqsir" path="res://9gyghygy/Free/Main Characters/Ninja Frog/Fall (32x32).png" id="1_wlfox"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u36op"]
+size = Vector2(44, 53)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_u36op")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.09375, 2.47266)
+texture = ExtResource("1_wlfox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u36op")
